@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff;
+    color: #333;
+    text-align: center;
+}
+
+nav {
+    background-color: #ffd700;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+header {
+    padding: 20px;
+    background-color: #add8e6;
+}
+
+.hero-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+section {
+    padding: 20px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.memory {
+    margin: 10px;
+    text-align: center;
+}
+
+.memory img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.wishes-list blockquote {
+    margin: 20px auto;
+    max-width: 600px;
+    font-style: italic;
+}
+
+.cake-section {
+    padding: 20px;
+}
+
+.cake {
+    position: relative;
+    display: inline-block;
+    font-size: 100px;
+    cursor: pointer;
+}
+
+.candles {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.candle {
+    width: 10px;
+    height: 30px;
+    background-color: #fff;
+    margin: 0 5px;
+    border-radius: 5px;
+}
+
+.candle.lit {
+    background-color: #ff4500;
+    box-shadow: 0 0 10px #ff4500;
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+    }
+    .gallery {
+        flex-direction: column;
+    }
+}
