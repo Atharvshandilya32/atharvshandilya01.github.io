@@ -1,111 +1,63 @@
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --accent-color: #e74c3c;
+    --bg-color: #ecf0f1;
+    --text-color: #2c3e50;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     margin: 0;
     padding: 0;
-    background-color: #f0f8ff;
-    color: #333;
+    transition: background-color 0.3s ease;
+}
+
+h1, h2, h3 {
+    color: var(--primary-color);
+}
+
+button {
+    background-color: var(--primary-color);
+    border: none;
+    color: white;
+    padding: 10px 20px;
     text-align: center;
-}
-
-nav {
-    background-color: #ffd700;
-    padding: 10px;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-}
-
-nav li {
-    margin: 0 15px;
-}
-
-nav a {
     text-decoration: none;
-    color: #333;
-    font-weight: bold;
-}
-
-header {
-    padding: 20px;
-    background-color: #add8e6;
-}
-
-.hero-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-section {
-    padding: 20px;
-}
-
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.memory {
-    margin: 10px;
-    text-align: center;
-}
-
-.memory img {
-    width: 300px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-.wishes-list blockquote {
-    margin: 20px auto;
-    max-width: 600px;
-    font-style: italic;
-}
-
-.cake-section {
-    padding: 20px;
-}
-
-.cake {
-    position: relative;
     display: inline-block;
-    font-size: 100px;
+    font-size: 16px;
+    margin: 4px 2px;
     cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
-.candles {
-    position: absolute;
-    top: -20px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
+button:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.05);
 }
 
-.candle {
-    width: 10px;
-    height: 30px;
-    background-color: #fff;
-    margin: 0 5px;
+.navbar {
+    background-color: var(--primary-color);
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+    background-color: white;
     border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
 }
 
-.candle.lit {
-    background-color: #ff4500;
-    box-shadow: 0 0 10px #ff4500;
+.card:hover {
+    transform: translateY(-5px);
 }
 
-@media (max-width: 600px) {
-    nav ul {
-        flex-direction: column;
-    }
-    .gallery {
-        flex-direction: column;
-    }
+.footer {
+    background-color: var(--primary-color);
+    text-align: center;
+    padding: 10px;
+    color: white;
 }
