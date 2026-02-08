@@ -1,31 +1,37 @@
-// Enhanced bug fix and improved JavaScript functionality with better error handling and animations
+// Improved script.js
 
-function exampleFunction() {
-    try {
-        // Simulate some logic
-        let result = potentiallyFailingOperation();
-        // Display results with animations
-        displayWithAnimation(result);
-    } catch (error) {
-        console.error('An error occurred:', error);
-        showErrorMessage('Something went wrong! Please try again.');
+// Function to show message safely
+function showMessage(message) {
+    const messageElement = document.getElementById('message');
+    if (messageElement) {
+        messageElement.textContent = message;
+        animateMessage(messageElement);
+    } else {
+        console.error('Message element not found!');
     }
 }
 
-function potentiallyFailingOperation() {
-    // Simulate a condition that may throw an error
-    if (Math.random() > 0.5) throw new Error('Random failure!');
-    return 'Success!';
+// Function to animate the message
+function animateMessage(element) {
+    element.style.opacity = 0;
+    element.style.transition = 'opacity 0.5s ease-in-out';
+    element.style.opacity = 1;
+    triggerConfetti(); // Trigger confetti effect
 }
 
-function displayWithAnimation(result) {
-    const element = document.getElementById('result');
-    element.innerText = result;
-    element.classList.add('fade-in'); // Example animation class
+// Function to trigger confetti effect
+function triggerConfetti() {
+    // Confetti logic goes here (can use a library like canvas-confetti)
 }
 
-function showErrorMessage(message) {
-    const errorElement = document.getElementById('error');
-    errorElement.innerText = message;
-    errorElement.classList.add('fade-in'); // Animation for error message
+// Function to handle errors and log them
+function logError(error) {
+    console.error('An error occurred:', error);
+}
+
+// Example usage of showMessage
+try {
+    showMessage('Welcome to the website!');
+} catch (error) {
+    logError(error);
 }
